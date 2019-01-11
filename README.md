@@ -16,12 +16,15 @@ Docker to run rMATS for splicing quantification and analysis
 
 ## Testing
 ```
+#download test data
 mkdir data
 wget -qO- https://datapacket.dl.sourceforge.net/project/rnaseq-mats/MATS/gtf.tgz | tar xvz -C data/
 wget -qO- https://netcologne.dl.sourceforge.net/project/rnaseq-mats/MATS/testData.tgz | tar xvz -C data/
 
+# run container
 docker run -ti -v data:/data rdeboo/rmats:4.0.2-3 bash
 
+# run these commands inside container
 cd /data/testData
 
 python /root/software/rmats/rMATS-turbo-Linux-UCS4/rmats.py \
@@ -30,5 +33,5 @@ python /root/software/rmats/rMATS-turbo-Linux-UCS4/rmats.py \
 --od /data/output -t paired --readLength 101 --cstat 0.0001 --libType fr-unstranded
 ```
 
-
+Note that the output is written in `/data` which is a directory on the host VM. Therefore the output is persisted after the docker container is exited.
 
