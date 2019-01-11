@@ -22,7 +22,7 @@ wget -qO- https://datapacket.dl.sourceforge.net/project/rnaseq-mats/MATS/gtf.tgz
 wget -qO- https://netcologne.dl.sourceforge.net/project/rnaseq-mats/MATS/testData.tgz | tar xvz -C data/
 
 # run container
-docker run -ti -v data:/data rdeboo/rmats:4.0.2-3 bash
+docker run -ti -v $(pwd)data:/data rdeboo/rmats:4.0.2-3 bash
 
 # run these commands inside container
 cd /data/testData
