@@ -1,5 +1,4 @@
-FROM ubuntu:16.10
-MAINTAINER Nuno Agostinho <nunodanielagostinho@gmail.com>
+FROM ubuntu:14.04
 
 RUN apt-get update
 
@@ -49,7 +48,14 @@ RUN pip install matplotlib
 
 RUN apt-get install -y bedtools
 
+RUN sudo apt-get install -y libblas-dev liblapack-dev
+RUN sudo apt-get install -y libgsl0ldbl
+RUN sudo apt-get install -y gfortran
+
 # rMATS
 # Usage: python ${rmats}/RNASeq-MATS.py [options]
-ENV rmats=rMATS.3.2.5
-ADD ${rmats}.tar.bz2 .
+ENV rmats=rMATS.4.0.2
+ADD rMATS.4.0.2 /${SW}/rmats
+
+# ADD data /data/
+
