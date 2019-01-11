@@ -57,5 +57,3 @@ RUN sudo apt-get install -y gfortran
 ENV rmats=rMATS.4.0.2
 ADD rMATS.4.0.2 /${SW}/rmats
 
-# ADD data /data/
-
