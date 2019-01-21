@@ -16,7 +16,7 @@ RUN apt-get install -y make
 ENV SW=/root/software
 WORKDIR ${SW}
 
-ENV samtools=samtools-1.5
+ENV samtools=samtools-1.9
 ADD ${samtools}.tar.bz2 .
 WORKDIR ${samtools}
 
