@@ -2,14 +2,13 @@
 Docker to run rMATS for splicing quantification and analysis
 
 ## Available software
-- [rMATS](http://rnaseq-mats.sourceforge.net) 3.2.5 (run using `python ${rmats}/RNASeq-MATS.py`)
-- [samtools](http://htslib.org) 1.5
+- [rMATS](http://rnaseq-mats.sourceforge.net) 4.0.2 (run using `python ${rmats}/RNASeq-MATS.py`)
+- [samtools](http://htslib.org) 1.9
 - [STAR](https://github.com/alexdobin/STAR) 2.5.3a
 - [python 2.7](https://python.org)
 
 ## Maintainer
-[Nuno Agostinho](mailto:nunodanielagostinho@gmail.com) - [Nuno Morais Lab](http://imm.medicina.ulisboa.pt/group/compbio/), iMM (2017)
-
+Ittai Muller (i.muller@vumc.nl) adapted from Nuno Agostintho (github.com/nuno-agostinho)
 
 ## Building
 `docker build . -t rdeboo/rmats:4.0.2-3`
